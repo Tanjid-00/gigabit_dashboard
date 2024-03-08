@@ -1,0 +1,226 @@
+body {
+  background: #f6f6f6;
+}
+:root {
+  --font: #252c58;
+  --icon: #79829c;
+  --blue: #3353f4b4;
+  --round: 15px;
+  --shadow: 0 0 10px #b9b9b9;
+}
+button {
+  cursor: pointer;
+}
+i {
+  color: var(--icon);
+}
+
+details > * {
+  display: block;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ------------------------------------- */
+#container {
+  padding: 3%;
+}
+nav {
+  background: white;
+  display: flex;
+  padding: 20px;
+  border-radius: var(--round);
+  box-shadow: var(--shadow);
+}
+
+#left-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#navBtn {
+  font-size: 30px;
+  cursor: pointer;
+}
+#logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 20px;
+  color: #3a3a3a;
+}
+#right-nav {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+#right-nav #searchDiv {
+  display: none;
+}
+#right-nav i {
+  padding: 7px;
+  background: #cfd7fd;
+  border-radius: 100%;
+}
+#right-nav i:hover {
+  outline: 1px solid #7182b6;
+}
+@media screen and (min-width: 768px) {
+  #right-nav #searchDiv {
+    display: block;
+    width: 400px;
+    padding-right: 20px;
+    border-right: 2px solid #9b9b9b;
+  }
+  #right-nav input {
+    background: #f6f6f6;
+    padding: 3px 10px;
+
+    width: 100%;
+    border-radius: 10px;
+    outline: 1px solid gray;
+  }
+}
+/* ------------------------------  Main ------*/
+#main {
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.expandEffect {
+  display: grid;
+  grid-template-columns: 80px auto;
+  gap: 30px;
+}
+
+.navItems {
+  display: none;
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: var(--round);
+  width: fit-content;
+}
+.navItems.expand {
+  display: block;
+}
+#navItemsIcon {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 0;
+}
+#navItemsIcon li {
+  border-left: 5px solid transparent;
+}
+#navItemsIcon li i {
+  font-size: 22px;
+  padding: 0 25px;
+}
+#navItemsIcon li:hover {
+  border-left: 5px solid var(--blue);
+}
+#navItemsIcon li:hover i {
+  color: var(--blue);
+}
+
+#sun {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+#time h2 {
+  color: var(--icon);
+  font-size: 25px;
+}
+#sunIcon {
+  font-size: 35px;
+}
+#today h2 {
+  font-weight: bold;
+  white-space: nowrap;
+}
+#weather button {
+  background: var(--blue);
+  color: white;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  max-height: 40px;
+  font-size: smaller;
+}
+
+/* ----------------------------------- boxes */
+
+#right .rightBox {
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: var(--round);
+  padding: 20px;
+}
+#right .rightBox h1 {
+  font-size: 30px;
+}
+#right .rightBox .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+#right .rightBox .iconP {
+  display: flex;
+  align-items: baseline;
+}
+#right .rightBox .iconP p {
+  padding-left: 10px;
+  font-size: 13px;
+}
+#right .rightBox .iconP i {
+  background: #43900c5f;
+  padding: 3px;
+  border-radius: 100%;
+}
+#right .rightBox .rightIcon {
+  color: var(--blue);
+  padding: 15px;
+  background: #0000ff25;
+  border-radius: 100%;
+}
+#weather {
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: var(--round);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  #main {
+    margin-top: 30px;
+    gap: 30px;
+    grid-template-columns: 350px auto;
+  }
+  #weather {
+    grid-gap: 50px;
+    height: 360px;
+  }
+}
+
+/* -------------------------------- Charts */
+#charts {
+  margin-top: 30px;
+}
+#lineChart,
+#donutChart {
+  background: white;
+  border-radius: var(--round);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  #charts {
+    grid-template-columns: auto 40%;
+  }
+}

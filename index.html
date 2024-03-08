@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ---------------- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div id="container" class="overflow-x-hidden">
+      <nav class="flex justify-between items-center">
+        <div id="left-nav">
+          <i id="navBtn" class="fa-solid fa-bars"></i>
+          <h1 id="logo">Gigabit</h1>
+        </div>
+        <div id="right-nav">
+          <div id="searchDiv">
+            <input type="search" placeholder="search here" />
+          </div>
+          <i class="fa-solid fa-calendar-days"></i>
+          <i class="fa-solid fa-bell"></i>
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </nav>
+
+      <!-- ------------------------------------------ Main -->
+      <main id="main" class="grid grid-cols-1 lg:grid-cols-2">
+        <div id="left" class="leftDiv">
+          <div class="navItems">
+            <ul id="navItemsIcon">
+              <li><i class="fa-solid fa-table-cells-large"></i></li>
+              <li><i class="fa-regular fa-message"></i></li>
+              <li><i class="fa-solid fa-clock-rotate-left"></i></li>
+            </ul>
+          </div>
+          <div id="weather" class="">
+            <div id="sun">
+              <i id="sunIcon" class="fa-regular fa-sun"></i>
+              <div id="time">
+                <h2>8:02:09 AM</h2>
+                <p>Realtime Insight</p>
+              </div>
+            </div>
+            <div id="today">
+              <h2>Today:<br />23rd August 2024</h2>
+            </div>
+            <button>View Attendence</button>
+          </div>
+        </div>
+        <div
+          id="right"
+          class="grid gap-5 grid-cols-1 lg:grid-cols-3 lg:gap-[30px]"
+        >
+          <div class="rightBox">
+            <div class="left">
+              <h1>475</h1>
+              <i class="fa-solid fa-users rightIcon"></i>
+            </div>
+            <div class="right">
+              <p>Total Employees</p>
+              <div class="iconP">
+                <i class="fa-solid fa-plus"></i>
+                <p>2 new employees added!</p>
+              </div>
+            </div>
+          </div>
+          <div class="rightBox">
+            <div class="left">
+              <h1>370</h1>
+              <i class="fa-solid fa-users rightIcon"></i>
+            </div>
+            <div class="right">
+              <p>On Time</p>
+              <div class="iconP">
+                <i class="fa-solid fa-plus"></i>
+                <p>-10% Less than yesterday</p>
+              </div>
+            </div>
+          </div>
+          <div class="rightBox">
+            <div class="left">
+              <h1>95</h1>
+              <i class="fa-solid fa-users rightIcon"></i>
+            </div>
+            <div class="right">
+              <p>Absent</p>
+              <div class="iconP">
+                <i style="background: #b6272768" class="fa-solid fa-plus"></i>
+                <p>+3% Increase than yesterday</p>
+              </div>
+            </div>
+          </div>
+          <div class="rightBox">
+            <div class="left">
+              <h1>82</h1>
+              <i class="fa-solid fa-users rightIcon"></i>
+            </div>
+            <div class="right">
+              <p>Late Arrival</p>
+              <div class="iconP">
+                <i style="background: #b6272768" class="fa-solid fa-plus"></i>
+                <p>+3% Increase than yesterday</p>
+              </div>
+            </div>
+          </div>
+          <div class="rightBox">
+            <div class="left">
+              <h1>170</h1>
+              <i class="fa-solid fa-users rightIcon"></i>
+            </div>
+            <div class="right">
+              <p>Early Departures</p>
+              <div class="iconP">
+                <i class="fa-solid fa-plus"></i>
+                <p>-10% Less than yesterday</p>
+              </div>
+            </div>
+          </div>
+          <div class="rightBox">
+            <div class="left">
+              <h1>45</h1>
+              <i class="fa-solid fa-users rightIcon"></i>
+            </div>
+            <div class="right">
+              <p>Time-Off</p>
+              <div class="iconP">
+                <i style="background: #2733b63c" class="fa-solid fa-plus"></i>
+                <p>2% Increase than yesterday</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div id="charts" class="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
+        <div id="lineChart">
+          <canvas id="myLineChart"></canvas>
+        </div>
+        <div id="donutChart">
+          <canvas id="myDonutChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./lineChart.js"></script>
+    <script src="./donutChart.js"></script>
+  </body>
+</html>
